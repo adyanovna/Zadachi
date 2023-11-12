@@ -1,0 +1,86 @@
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box
+}
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+}
+.section {
+    margin: 60px 0 /* внешние отступы для блока - сверху и снизу по 60px, слева и справа по 0px */;
+}
+.container {
+    max-width: 2000px /* максимальная ширина контейнера */;
+    /*margin: 0 auto !* расположение контейнера по центру *!;*/
+    margin: 0 auto;
+    padding: 0 30px /* внутренние отступы слева и справа по 30px, верхний и нижний отступы по 0px */;
+}
+
+.card__text {
+    flex: 1;
+}
+
+.catalog__flex {
+    display: flex /* по умолчанию дочерние блоки(.catalog__col) будут располагаться в ряд */;
+    flex-wrap: wrap /* дочерние блоки переносятся на следующую строку, если ширина всех внутренних блоков превышает ширину родительского блока(.catalog__flex) */;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    margin: 0 -15px -30px /* Отрицательные внешние отступы(значения противоположные значениям padding блока .catalog__col), чтобы компенсировать внутренние отступы дочерних блоков(.catalog__col), НЕ ДОЛЖЕН превышать боковых значений padding блока .container*/;
+}
+.catalog__col {
+    width: 30% /* Задаем ширину блока(по 3 блока в ряд)*/;
+    padding: 0 15px 30px /* Размер внутренних отступов блока - справа и слева по 15px(которые дают общий отступ 30px между блоками) и снизу отступ 30px */;
+
+}
+.card {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0 0 15px rgba(33,37,41,0.1);
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.card__title {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+
+/* Адаптивность */
+@media (max-width: 1024px) {
+    .catalog__col {
+        width: 49.9999999% /* при ширине браузера меньше 1024px будет по 2 блока в ряд */;
+    }
+}
+
+@media (max-width: 768px) {
+    .catalog__col {
+        width: 100% /* при ширине браузера меньше 768px будет по 1 блоку */;
+    }
+}
+
+
+/*.card__button a {*/
+/*    display: inline-flex;*/
+/*    padding: 0 30px;*/
+/*    border-radius: 10px;*/
+/*    align-items: center;*/
+/*    justify-content: center;*/
+/*    height: 40px;*/
+/*    color: #212529;*/
+/*    text-decoration: none;*/
+/*    font-weight: bold;*/
+/*    border: 1px solid #f7cb15;*/
+/*    transition: all 0.3s ease;*/
+/*    background: #fff;*/
+/*}*/
+
+/*.card:hover {*/
+/*    box-shadow: 0 0 5px rgba(33,37,41,0.1);*/
+/*}*/
