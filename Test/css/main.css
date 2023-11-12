@@ -66,21 +66,25 @@ body {
 }
 
 
-/*.card__button a {*/
-/*    display: inline-flex;*/
-/*    padding: 0 30px;*/
-/*    border-radius: 10px;*/
-/*    align-items: center;*/
-/*    justify-content: center;*/
-/*    height: 40px;*/
-/*    color: #212529;*/
-/*    text-decoration: none;*/
-/*    font-weight: bold;*/
-/*    border: 1px solid #f7cb15;*/
-/*    transition: all 0.3s ease;*/
-/*    background: #fff;*/
-/*}*/
+.button a {
+    display: inline-flex;
+    float: right;
+    position: -ms-device-fixed;
+    margin-right: 3%;
+    padding: 0 30px;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    color: black;
+    font-weight: bold;
+    border: 1px solid #000000;
+    transition: all 0.3s ease;
+    background: #fff;
 
-/*.card:hover {*/
-/*    box-shadow: 0 0 5px rgba(33,37,41,0.1);*/
-/*}*/
+}
+
+.button a:hover {
+    border: 1px solid blue;
+    color: blue;
+}
