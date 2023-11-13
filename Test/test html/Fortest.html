@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Test</title>
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="../css/main.css">
 </head>
 <body>
+
 <h1>Задача 2.1</h1>
 
 <div class="section"> <!-- Основная секция -->
@@ -101,6 +102,44 @@
 </div>
 <button type="submit" id="button" onclick="puush();">Плитка/Список</button>
 
-<script src="JS/main.js"></script>
+
+<h1>Задача 2.2</h1>
+<div class="wrapper">
+    <form class="wrapper__input">
+        <input name="contactsForm" type="text" id="ContactName" placeholder="Ваше имя">
+
+
+
+
+    <input name="contactsForm" type="text" id="ContactNumber" placeholder="Номер телефона">
+
+
+
+
+    <input name="contactsForm" type="text" id="ContactMail" placeholder="Ваш E-mail">
+
+    </form>
+</div>
+
+<div class="wrapper">
+    <div class="wrapper__input">
+        <input type="text" id="first" placeholder="Phone"> <!-- единственное поле ввода -->
+    </div>
+</div>
+
+<script src="../JS/imask.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+        const inputElement = document.querySelector('#ContactNumber')
+        const maskOptions = {
+            mask: '+{7}(000)000-00-00'
+        }
+        IMask(inputElement, maskOptions)
+
+    })
+</script>
+
+
 </body>
 </html>

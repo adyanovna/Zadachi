@@ -23,4 +23,5 @@ function puush() {
     }
 }
 
+
 // abc[i].classList.remove('catalog__full');
