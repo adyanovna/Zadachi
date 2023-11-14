@@ -1,11 +1,3 @@
-// function puush(){
-//     document.getElementById('button').style.backgroundColor = '#817F7FFF';
-//     var abc = document.querySelectorAll('.catalog__col');
-//     for(var i = 0; i < abc.length; i++) {
-//         abc[i].style.width="100%";
-//     }
-// }
-
 
 function puush() {
     if (document.getElementById('button').style.backgroundColor ==='rgb(129, 127, 127)') {
@@ -23,5 +15,3 @@ function puush() {
     }
 }
 
-
-// abc[i].classList.remove('catalog__full');
